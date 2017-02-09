@@ -76,7 +76,12 @@ sub getLista_Archivos {
 		  elsif($_=~/XSL\\.*\..*$/){
 			 print "\nsubiendo archivo: ".$_."\n";
 			 Crear_archivo_teporal($_,"xsl");
-		  }else{
+			 }
+		  elsif($_=~/NBA_NBO\\.*\..*$/){
+			 print "\nsubiendo archivo: ".$_."\n";
+			 Crear_archivo_teporal($_,"NBA_NBO");
+		  }
+		  else{
 		    print "\nsubiendo archivo: ".$_."\n";
 			Crear_archivo_teporal($_,"");
 		  }
