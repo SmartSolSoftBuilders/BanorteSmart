@@ -10,14 +10,13 @@ set RTCURL=%5%
 set MEMORY=%6%
 set FOLIO=%7%
 set PROYECTO_SSC=%8%
-set 
 set PROJECTROOT=%REF_DIR%\run\%PROYECTO%_int
 set TARGET_DIR=\\15.128.27.58\SourceCode\FortifyRTC\%PROYECTO%_int
 
 if not exist %PROJECTROOT% mkdir %PROJECTROOT%
 if not exist %TARGET_DIR% mkdir %TARGET_DIR%
 REM Descarga de codigo fuente este se unira con el descargar fuentes previo de openmake
-call %REF_DIR%\Scripts\descarga_fuentes.bat %COMPONENTE% %WS% %RTCURL% %PROJECTROOT%
+REM call %REF_DIR%\Scripts\descarga_fuentes.bat %COMPONENTE% %WS% %RTCURL% %PROJECTROOT%
 REM Copiado de codigo fuente
 xcopy /y/e/r/i %PROJECTROOT% %TARGET_DIR%
 REM Ejecucion de escaneo remoto
